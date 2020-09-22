@@ -1,0 +1,241 @@
+@import "./variables";
+
+@media (max-width: 400px) {
+    header nav {
+        // all this for Hamburguer Menu
+        label.hamburguer-menu {
+            display: block;
+            border: green solid 2px;
+            padding: 10px;
+            position: relative;
+            float: right;
+            cursor: pointer;
+            span {
+                background: #333;
+                display: block;
+                position: relative;
+                height: 3px;
+                width: 20px;
+                transition: background 0.2s ease-out;
+                &::before {
+                    content: "";
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    background: #333;
+                    position: absolute;
+                    transition: all 0.2s ease-out;
+                    top: 5px;
+                }
+                &::after {
+                    content: "";
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    background: #333;
+                    position: absolute;
+                    transition: all 0.2s ease-out;
+                    top: -5px;
+                }
+            }
+        }
+        #toggle {
+            display: none;
+
+            &:checked ~ ul.Menu {
+                // max-height: 250px;
+                display: block;
+            }
+            &:checked ~ label.hamburguer-menu span {
+                background: transparent;
+                &::before {
+                    transform: rotate(-45deg);
+                    top: 0;
+                }
+
+                &::after {
+                    transform: rotate(45deg);
+                    top: 0;
+                }
+            }
+        }
+        ul.Menu {
+            // max-height: 0;
+            display: none;
+            width: 100vw;
+            background: #333;
+            transition: all 2s ease-in-out;
+            position: absolute;
+
+            li {
+                width: 100vw;
+                &:hover {
+                    background: #3d78ac;
+                    color: #dfd9d9;
+                    // background: #1c262f;
+                }
+            }
+            a {
+                display: block;
+                padding: 20px 10px;
+                color: #ddd;
+                text-transform: capitalize;
+                text-decoration: none;
+                font-size: 5.5vw;
+            }
+        }
+        .demo {
+            display: none;
+        }
+        .circle {
+            display: block;
+            background: rgba(46, 64, 78, 0.3);
+            height: 270px;
+            width: 110vw;
+            // width: 400px;
+            border-radius: 50%;
+            position: absolute;
+
+            transform: translate(1px, -150px);
+            z-index: -1;
+            overflow: hidden;
+        }
+    }
+
+    main {
+        section.start-building {
+            display: flex;
+            flex-direction: column-reverse;
+
+            div {
+                align-self: center;
+                padding-top: 2rem;
+                h1 {
+                    font-size: 30px;
+                    font-weight: 900;
+                    line-height: 44px;
+                    text-align: center;
+                    color: $primary-color;
+                    margin-bottom: 1em;
+                }
+
+                img {
+                    width: 100px;
+                    height: 150px;
+                }
+            }
+            div {
+                form {
+                    margin: 0 1em;
+                    input {
+                        width: 90vw;
+                        height: 50px;
+                        border-radius: 36px;
+                        padding-left: 20px;
+                        &::placeholder {
+                            text-align: center;
+                        }
+                    }
+                    button {
+                        width: 90vw;
+                        height: 50px;
+                        border-radius: 36px;
+                        margin-top: 15px;
+                        background: $secondary-color;
+                        color: #efdbe5;
+                    }
+                }
+                p {
+                    text-align: center;
+                    margin: 1.2em auto;
+                }
+            }
+        }
+        section.partners {
+            display: flex;
+            flex-direction: column-reverse;
+            background: #1c262f;
+            position: relative;
+            div#partnersImg {
+                display: flex;
+                justify-content: space-evenly;
+                flex-wrap: wrap;
+                height: 27vh;
+                margin-top: 40px;
+                img {
+                    width: 109px;
+                    height: 50px;
+                }
+            }
+            div#partners {
+                overflow: hidden;
+                h2 {
+                    font-size: 30px;
+                    font-weight: 900;
+                    line-height: 44px;
+                    text-align: center;
+                    color: #fafcfd;
+                    margin-bottom: 1em;
+                }
+                P {
+                    text-align: center;
+                    color: #82888e;
+                    line-height: 24px;
+                    width: 95vw;
+                }
+                a {
+                    border-radius: 29px;
+                    border: 1px solid #bdc1c5;
+                    background: #1c262f;
+                    display: block;
+                    margin: 3em auto;
+
+                    padding-top: 10px;
+
+                    font-size: 18px;
+                    color: #bdc1c5;
+                    width: 150px;
+                    height: 44px;
+                    text-align: center;
+                    text-decoration: none;
+                    text-transform: capitalize;
+                    &:hover {
+                        border-color: #18a0fb;
+                    }
+                }
+            }
+        }
+        .easy-to-implement {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            div img {
+                max-width: 70vw;
+            }
+            div {
+                h4 {
+                    text-align: center;
+                    font-size: 30px;
+                    color: $primary-color;
+                    margin: 1em auto;
+                }
+                p {
+                    text-align: center;
+                    width: 95vw;
+                    // color: $primary-color;
+                    color: red;
+                }
+            }
+        }
+        .UI&UX {
+            span.circle::after {
+                content: "oi";
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+        }
+    }
+}

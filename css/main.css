@@ -1,0 +1,280 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;900&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+ul {
+  list-style: none;
+}
+
+@media (max-width: 400px) {
+  header nav label.hamburguer-menu {
+    display: block;
+    border: green solid 2px;
+    padding: 10px;
+    position: relative;
+    float: right;
+    cursor: pointer;
+  }
+  header nav label.hamburguer-menu span {
+    background: #333;
+    display: block;
+    position: relative;
+    height: 3px;
+    width: 20px;
+    -webkit-transition: background 0.2s ease-out;
+    transition: background 0.2s ease-out;
+  }
+  header nav label.hamburguer-menu span::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #333;
+    position: absolute;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    top: 5px;
+  }
+  header nav label.hamburguer-menu span::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #333;
+    position: absolute;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    top: -5px;
+  }
+  header nav #toggle {
+    display: none;
+  }
+  header nav #toggle:checked ~ ul.Menu {
+    display: block;
+  }
+  header nav #toggle:checked ~ label.hamburguer-menu span {
+    background: transparent;
+  }
+  header nav #toggle:checked ~ label.hamburguer-menu span::before {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    top: 0;
+  }
+  header nav #toggle:checked ~ label.hamburguer-menu span::after {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    top: 0;
+  }
+  header nav ul.Menu {
+    display: none;
+    width: 100vw;
+    background: #333;
+    -webkit-transition: all 2s ease-in-out;
+    transition: all 2s ease-in-out;
+    position: absolute;
+  }
+  header nav ul.Menu li {
+    width: 100vw;
+  }
+  header nav ul.Menu li:hover {
+    background: #3d78ac;
+    color: #dfd9d9;
+  }
+  header nav ul.Menu a {
+    display: block;
+    padding: 20px 10px;
+    color: #ddd;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-size: 5.5vw;
+  }
+  header nav .demo {
+    display: none;
+  }
+  header nav .circle {
+    display: block;
+    background: rgba(46, 64, 78, 0.3);
+    height: 270px;
+    width: 110vw;
+    border-radius: 50%;
+    position: absolute;
+    -webkit-transform: translate(1px, -150px);
+            transform: translate(1px, -150px);
+    z-index: -1;
+    overflow: hidden;
+  }
+  main section.start-building {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  main section.start-building div {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    padding-top: 2rem;
+  }
+  main section.start-building div h1 {
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 44px;
+    text-align: center;
+    color: #36506b;
+    margin-bottom: 1em;
+  }
+  main section.start-building div img {
+    width: 100px;
+    height: 150px;
+  }
+  main section.start-building div form {
+    margin: 0 1em;
+  }
+  main section.start-building div form input {
+    width: 90vw;
+    height: 50px;
+    border-radius: 36px;
+    padding-left: 20px;
+  }
+  main section.start-building div form input::-webkit-input-placeholder {
+    text-align: center;
+  }
+  main section.start-building div form input:-ms-input-placeholder {
+    text-align: center;
+  }
+  main section.start-building div form input::-ms-input-placeholder {
+    text-align: center;
+  }
+  main section.start-building div form input::placeholder {
+    text-align: center;
+  }
+  main section.start-building div form button {
+    width: 90vw;
+    height: 50px;
+    border-radius: 36px;
+    margin-top: 15px;
+    background: #ba4270;
+    color: #efdbe5;
+  }
+  main section.start-building div p {
+    text-align: center;
+    margin: 1.2em auto;
+  }
+  main section.partners {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    background: #1c262f;
+    position: relative;
+  }
+  main section.partners div#partnersImg {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    height: 27vh;
+    margin-top: 40px;
+  }
+  main section.partners div#partnersImg img {
+    width: 109px;
+    height: 50px;
+  }
+  main section.partners div#partners {
+    overflow: hidden;
+  }
+  main section.partners div#partners h2 {
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 44px;
+    text-align: center;
+    color: #fafcfd;
+    margin-bottom: 1em;
+  }
+  main section.partners div#partners P {
+    text-align: center;
+    color: #82888e;
+    line-height: 24px;
+    width: 95vw;
+  }
+  main section.partners div#partners a {
+    border-radius: 29px;
+    border: 1px solid #bdc1c5;
+    background: #1c262f;
+    display: block;
+    margin: 3em auto;
+    padding-top: 10px;
+    font-size: 18px;
+    color: #bdc1c5;
+    width: 150px;
+    height: 44px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: capitalize;
+  }
+  main section.partners div#partners a:hover {
+    border-color: #18a0fb;
+  }
+  main .easy-to-implement {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .easy-to-implement div img {
+    max-width: 70vw;
+  }
+  main .easy-to-implement div h4 {
+    text-align: center;
+    font-size: 30px;
+    color: #36506b;
+    margin: 1em auto;
+  }
+  main .easy-to-implement div p {
+    text-align: center;
+    width: 95vw;
+    color: #36506b;
+  }
+}
+
+body {
+  width: 100vw;
+  height: auto;
+  font-family: "Playfair Display", serif;
+  background: #eef3f9;
+  border: red solid 5px;
+}
+
+body header,
+body main {
+  margin: 0;
+}
+
+body header nav #toggle {
+  display: none;
+}
+/*# sourceMappingURL=main.css.map */

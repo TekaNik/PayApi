@@ -1,0 +1,26 @@
+start building: 
+font family: heebo,sans-serif. weight 400. lineheight 24px size 16px color #1c2022
+libre baskerville
+playfair display
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;900&display=swap');
+font-family: 'Playfair Display', serif;
+
+for form animat check ED video
+https://www.youtube.com/watch?v=IxRJ8vplzAo&ab_channel=DevEd
+
+Hambug menu
+https://www.youtube.com/watch?v=xMTs8tAapnQ&ab_channel=CalerEdwards
+
+https://www.youtube.com/watch?v=sjrp1FEHnyA&ab_channel=FollowAndrew
+
+
+
+
+
+
+
+
+                       
+
+
