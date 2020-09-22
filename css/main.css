@@ -11,8 +11,13 @@ ul {
   list-style: none;
 }
 
+img {
+  height: auto;
+  max-width: 100%;
+}
+
 @media (max-width: 400px) {
-  header nav label.hamburguer-menu {
+  body header nav label.hamburguer-menu {
     display: block;
     border: green solid 2px;
     padding: 10px;
@@ -20,7 +25,7 @@ ul {
     float: right;
     cursor: pointer;
   }
-  header nav label.hamburguer-menu span {
+  body header nav label.hamburguer-menu span {
     background: #333;
     display: block;
     position: relative;
@@ -29,7 +34,7 @@ ul {
     -webkit-transition: background 0.2s ease-out;
     transition: background 0.2s ease-out;
   }
-  header nav label.hamburguer-menu span::before {
+  body header nav label.hamburguer-menu span::before {
     content: "";
     display: block;
     width: 100%;
@@ -40,7 +45,7 @@ ul {
     transition: all 0.2s ease-out;
     top: 5px;
   }
-  header nav label.hamburguer-menu span::after {
+  body header nav label.hamburguer-menu span::after {
     content: "";
     display: block;
     width: 100%;
@@ -51,41 +56,41 @@ ul {
     transition: all 0.2s ease-out;
     top: -5px;
   }
-  header nav #toggle {
+  body header nav #toggle {
     display: none;
   }
-  header nav #toggle:checked ~ ul.Menu {
+  body header nav #toggle:checked ~ ul.Menu {
     display: block;
   }
-  header nav #toggle:checked ~ label.hamburguer-menu span {
+  body header nav #toggle:checked ~ label.hamburguer-menu span {
     background: transparent;
   }
-  header nav #toggle:checked ~ label.hamburguer-menu span::before {
+  body header nav #toggle:checked ~ label.hamburguer-menu span::before {
     -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg);
     top: 0;
   }
-  header nav #toggle:checked ~ label.hamburguer-menu span::after {
+  body header nav #toggle:checked ~ label.hamburguer-menu span::after {
     -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
     top: 0;
   }
-  header nav ul.Menu {
+  body header nav ul.Menu {
     display: none;
-    width: 100vw;
+    width: 99vw;
     background: #333;
     -webkit-transition: all 2s ease-in-out;
     transition: all 2s ease-in-out;
     position: absolute;
   }
-  header nav ul.Menu li {
+  body header nav ul.Menu li {
     width: 100vw;
   }
-  header nav ul.Menu li:hover {
+  body header nav ul.Menu li:hover {
     background: #3d78ac;
     color: #dfd9d9;
   }
-  header nav ul.Menu a {
+  body header nav ul.Menu a {
     display: block;
     padding: 20px 10px;
     color: #ddd;
@@ -93,14 +98,14 @@ ul {
     text-decoration: none;
     font-size: 5.5vw;
   }
-  header nav .demo {
+  body header nav .demo {
     display: none;
   }
-  header nav .circle {
+  body header nav .circle {
     display: block;
     background: rgba(46, 64, 78, 0.3);
     height: 270px;
-    width: 110vw;
+    width: 100vw;
     border-radius: 50%;
     position: absolute;
     -webkit-transform: translate(1px, -150px);
@@ -108,7 +113,7 @@ ul {
     z-index: -1;
     overflow: hidden;
   }
-  main section.start-building {
+  body main section.start-building {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -117,13 +122,13 @@ ul {
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
   }
-  main section.start-building div {
+  body main section.start-building div {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
     padding-top: 2rem;
   }
-  main section.start-building div h1 {
+  body main section.start-building div h1 {
     font-size: 30px;
     font-weight: 900;
     line-height: 44px;
@@ -131,32 +136,32 @@ ul {
     color: #36506b;
     margin-bottom: 1em;
   }
-  main section.start-building div img {
+  body main section.start-building div img {
     width: 100px;
     height: 150px;
   }
-  main section.start-building div form {
+  body main section.start-building div form {
     margin: 0 1em;
   }
-  main section.start-building div form input {
+  body main section.start-building div form input {
     width: 90vw;
     height: 50px;
     border-radius: 36px;
     padding-left: 20px;
   }
-  main section.start-building div form input::-webkit-input-placeholder {
+  body main section.start-building div form input::-webkit-input-placeholder {
     text-align: center;
   }
-  main section.start-building div form input:-ms-input-placeholder {
+  body main section.start-building div form input:-ms-input-placeholder {
     text-align: center;
   }
-  main section.start-building div form input::-ms-input-placeholder {
+  body main section.start-building div form input::-ms-input-placeholder {
     text-align: center;
   }
-  main section.start-building div form input::placeholder {
+  body main section.start-building div form input::placeholder {
     text-align: center;
   }
-  main section.start-building div form button {
+  body main section.start-building div form button {
     width: 90vw;
     height: 50px;
     border-radius: 36px;
@@ -164,11 +169,11 @@ ul {
     background: #ba4270;
     color: #efdbe5;
   }
-  main section.start-building div p {
+  body main section.start-building div p {
     text-align: center;
     margin: 1.2em auto;
   }
-  main section.partners {
+  body main section.partners {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -178,8 +183,9 @@ ul {
             flex-direction: column-reverse;
     background: #1c262f;
     position: relative;
+    overflow: hidden;
   }
-  main section.partners div#partnersImg {
+  body main section.partners div#partnersImg {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -188,31 +194,43 @@ ul {
             justify-content: space-evenly;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    height: 27vh;
     margin-top: 40px;
   }
-  main section.partners div#partnersImg img {
-    width: 109px;
-    height: 50px;
+  body main section.partners div#partnersImg img {
+    width: 130px;
+    height: 25px;
+    margin: 1em;
+    z-index: 2;
   }
-  main section.partners div#partners {
+  body main section.partners div#partnersImg .circle {
+    display: block;
+    background: rgba(46, 64, 78, 0.2);
+    height: 270px;
+    width: 100vw;
+    border-radius: 50%;
+    position: absolute;
+    -webkit-transform: translate(1px, -150px);
+            transform: translate(1px, -150px);
+  }
+  body main section.partners div#partners {
     overflow: hidden;
   }
-  main section.partners div#partners h2 {
+  body main section.partners div#partners h2 {
     font-size: 30px;
     font-weight: 900;
     line-height: 44px;
     text-align: center;
     color: #fafcfd;
     margin-bottom: 1em;
+    margin-top: 3em;
   }
-  main section.partners div#partners P {
+  body main section.partners div#partners P {
     text-align: center;
     color: #82888e;
     line-height: 24px;
     width: 95vw;
   }
-  main section.partners div#partners a {
+  body main section.partners div#partners a {
     border-radius: 29px;
     border: 1px solid #bdc1c5;
     background: #1c262f;
@@ -227,10 +245,10 @@ ul {
     text-decoration: none;
     text-transform: capitalize;
   }
-  main section.partners div#partners a:hover {
+  body main section.partners div#partners a:hover {
     border-color: #18a0fb;
   }
-  main .easy-to-implement {
+  body main .easy-to-implement {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -245,19 +263,275 @@ ul {
         -ms-flex-align: center;
             align-items: center;
   }
-  main .easy-to-implement div img {
+  body main .easy-to-implement div img {
     max-width: 70vw;
+    margin-top: 5em;
   }
-  main .easy-to-implement div h4 {
+  body main .easy-to-implement div h4 {
     text-align: center;
     font-size: 30px;
     color: #36506b;
     margin: 1em auto;
   }
-  main .easy-to-implement div p {
+  body main .easy-to-implement div p {
     text-align: center;
     width: 95vw;
+    color: #7a8c9a;
+  }
+  body main .UIUX {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body main .UIUX div h3 {
+    text-align: center;
+    font-size: 30px;
     color: #36506b;
+    margin: 1em auto;
+  }
+  body main .UIUX div p {
+    text-align: center;
+    width: 95vw;
+    color: #7a8c9a;
+    margin-bottom: 4em;
+  }
+  body main .UIUX div img {
+    height: auto;
+    width: 85%;
+    margin: 0 auto;
+    display: block;
+  }
+  body main .personalFinance {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  body main .personalFinance div h5 {
+    text-align: center;
+    font-size: 30px;
+    color: #36506b;
+    margin: 1em auto;
+  }
+  body main .personalFinance div p {
+    text-align: center;
+    width: 95vw;
+    color: #7a8c9a;
+    margin-bottom: 4em;
+  }
+  body main .personalFinance div img {
+    display: block;
+    margin: 0 auto;
+    height: auto;
+  }
+  body main .ready_to_start > p {
+    font-size: 25px;
+    font-weight: 900;
+    text-align: center;
+    color: #36506b;
+    margin-bottom: 1.2em;
+  }
+  body main .ready_to_start form {
+    margin: 0 1em;
+  }
+  body main .ready_to_start form input {
+    width: 90vw;
+    height: 50px;
+    border-radius: 36px;
+    padding-left: 20px;
+  }
+  body main .ready_to_start form input::-webkit-input-placeholder {
+    text-align: center;
+  }
+  body main .ready_to_start form input:-ms-input-placeholder {
+    text-align: center;
+  }
+  body main .ready_to_start form input::-ms-input-placeholder {
+    text-align: center;
+  }
+  body main .ready_to_start form input::placeholder {
+    text-align: center;
+  }
+  body main .ready_to_start form button {
+    width: 90vw;
+    height: 50px;
+    border-radius: 36px;
+    margin-top: 15px;
+    background: #ba4270;
+    color: #efdbe5;
+  }
+  body footer {
+    margin-top: 3em;
+    background: #1c262f;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 50vh;
+    position: relative;
+    overflow: hidden;
+  }
+  body footer .circle {
+    display: block;
+    background: rgba(46, 64, 78, 0.2);
+    height: 270px;
+    width: 100vw;
+    border-radius: 50%;
+    position: absolute;
+    -webkit-transform: translate(1px, 150px);
+            transform: translate(1px, 150px);
+  }
+  body footer ul {
+    z-index: 1;
+  }
+  body footer ul li {
+    padding: 1em;
+  }
+  body footer ul li a {
+    color: #aeb3b9;
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: capitalize;
+  }
+  body footer .social_media {
+    z-index: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  body footer .social_media img {
+    width: 24px;
+    height: 24px;
+    margin-right: 1em;
+  }
+  body main > h2 {
+    text-align: center;
+    font-size: 30px;
+    line-height: 44px;
+    height: auto;
+    width: 90vw;
+    color: #36506b;
+  }
+  body main .our_vision {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body main .our_vision div > h3,
+  body main .our_vision div > h4,
+  body main .our_vision div > p {
+    text-align: center;
+    line-height: 24px;
+    width: 90vw;
+  }
+  body main .our_vision div > h3 {
+    font-size: 20px;
+    margin: 2rem auto;
+    color: #36506b;
+  }
+  body main .our_vision div > p {
+    color: #7a8c9a;
+  }
+  body main .team h6 {
+    color: #7a8c9a;
+    text-transform: capitalize;
+  }
+  body main .team span {
+    font-size: 40px;
+    color: #ba4270;
+    font-weight: 900;
+    text-align: center;
+    display: block;
+    margin: 1.5rem auto;
+  }
+  body header nav .side-cicle {
+    -webkit-transform: translate(70%, -65%);
+            transform: translate(70%, -65%);
+  }
+  body main .pricing-plannes div > h4 {
+    color: #ba4270;
+    margin: 2rem auto;
+    text-transform: capitalize;
+  }
+  body main .pricing-plannes div span {
+    font-size: 30px;
+    text-align: center;
+    display: block;
+    color: #36506b;
+    font-weight: 900;
+  }
+  body main .pricing-plannes ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    margin-left: 20vw;
+    max-width: 50vw;
+  }
+  body main .pricing-plannes ul li .fas {
+    color: #ba4270;
+    margin-right: 2em;
+  }
+  body main .pricing-plannes ul li span {
+    margin-left: 1.5em;
+    display: inline-block;
+  }
+  body main .pricing-plannes button {
+    border-radius: 29px;
+    border: 3px solid #bdc1c5;
+    background: inherit;
+    display: block;
+    margin: 3em auto;
+    color: #36506b;
+    width: 150px;
+    height: 44px;
+    text-transform: capitalize;
+  }
+  body main .pricing-plannes button:hover {
+    border-color: #18a0fb;
   }
 }
 
