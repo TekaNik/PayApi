@@ -1364,6 +1364,9 @@ main section.contact-us div p {
     color: #36506b;
     font-weight: 900;
   }
+  body main .pricing-plannes div p {
+    text-align: center;
+  }
   body main .pricing-plannes ul {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1379,6 +1382,9 @@ main section.contact-us div p {
             justify-content: space-evenly;
     margin-left: 20vw;
     max-width: 50vw;
+  }
+  body main .pricing-plannes ul .empty {
+    margin-left: 3em;
   }
   body main .pricing-plannes ul li .fas {
     color: #ba4270;
