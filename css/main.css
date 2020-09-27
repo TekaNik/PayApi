@@ -579,14 +579,16 @@ body main .our_vision div > p {
 
 body main .our_vision div > h3 {
   font-size: 20px;
-  margin: 2rem auto;
   color: #36506b;
   width: 30vw;
+  text-transform: capitalize;
 }
 
 body main .our_vision div > p {
   color: #7a8c9a;
   width: 40vw;
+  margin-bottom: 2em;
+  text-align: justify;
 }
 
 body main .our_vision div {

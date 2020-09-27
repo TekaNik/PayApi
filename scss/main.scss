@@ -468,13 +468,15 @@ body {
       }
       div > h3 {
         font-size: 20px;
-        margin: 2rem auto;
         color: $primary-color;
         width: 30vw;
+        text-transform: capitalize;
       }
       div > p {
         color: $for-text;
         width: 40vw;
+        margin-bottom: 2em;
+        text-align: justify;
       }
       div {
         display: flex;
