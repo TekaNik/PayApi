@@ -1366,6 +1366,7 @@ main section.contact-us div p {
   }
   body main .pricing-plannes div p {
     text-align: center;
+    margin: 2em;
   }
   body main .pricing-plannes ul {
     display: -webkit-box;
