@@ -16,14 +16,830 @@ img {
   max-width: 100%;
 }
 
+body {
+  width: 100vw;
+  height: auto;
+  font-family: "Playfair Display", serif;
+  background: #eef3f9;
+  overflow-x: hidden;
+}
+
+body .circle {
+  display: block;
+  background: rgba(46, 64, 78, 0.3);
+  height: 270px;
+  width: 100vw;
+  border-radius: 50%;
+  position: absolute;
+  z-index: -1;
+  overflow: hidden;
+}
+
+body .demo {
+  height: 50px;
+  border-radius: 36px;
+  background: #ba4270;
+  color: #efdbe5;
+}
+
+body .ready_to_start {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 2.5rem;
+}
+
+body .ready_to_start > p {
+  font-size: 25px;
+  font-weight: 900;
+  text-align: center;
+  color: #36506b;
+  margin-bottom: 1.2em;
+}
+
+body .ready_to_start form {
+  margin: 0 1em;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+body .ready_to_start form input {
+  width: 25vw;
+  height: 50px;
+  border-radius: 36px 0 0 36px;
+  padding-left: 20px;
+}
+
+body .ready_to_start form input::-webkit-input-placeholder {
+  text-align: left;
+}
+
+body .ready_to_start form input:-ms-input-placeholder {
+  text-align: left;
+}
+
+body .ready_to_start form input::-ms-input-placeholder {
+  text-align: left;
+}
+
+body .ready_to_start form input::placeholder {
+  text-align: left;
+}
+
+body .ready_to_start form button {
+  width: 10vw;
+  height: 50px;
+  font-size: 1.2vw;
+  border-radius: 0 36px 36px 0;
+  background: #ba4270;
+  color: #efdbe5;
+  cursor: pointer;
+}
+
+body header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body header nav ul.Menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  position: relative;
+  left: -15%;
+  width: 40vw;
+  margin-top: 1.5em;
+}
+
+body header nav ul.Menu a {
+  color: #36506b;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+body header nav ul.Menu a:hover {
+  border-bottom: 3px solid #18a0fb;
+}
+
+body header nav #toggle {
+  display: none;
+}
+
+body header nav .circle {
+  width: 45%;
+  height: 50vh;
+  max-height: 60%;
+  -webkit-transform: translate(60vw, -15%);
+          transform: translate(60vw, -15%);
+}
+
+body header nav .logo img {
+  width: 12rem;
+}
+
+body header nav .demo {
+  width: 10vw;
+  margin-top: 1.5em;
+  margin-right: 8%;
+  text-align: center;
+  text-decoration: none;
+  padding: 15px;
+  font-size: 14px;
+}
+
+body main button.btn {
+  border-radius: 29px;
+  background: inherit;
+  display: block;
+  margin: 3em auto;
+  color: #36506b;
+  width: 150px;
+  height: 44px;
+  text-transform: capitalize;
+}
+
+body main button.btn:hover {
+  border-color: #18a0fb;
+}
+
+body main .circle {
+  background: rgba(46, 64, 78, 0.3);
+  height: 270px;
+  width: 100vw;
+}
+
+body main section.start-building {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+body main section.start-building div.phone-1 {
+  width: 50%;
+  margin-left: 0;
+}
+
+body main section.start-building div.phone-1 img {
+  width: 140px;
+  max-width: 40%;
+  height: auto;
+  position: relative;
+  left: 60%;
+}
+
+body main section.start-building div {
+  padding-top: 2rem;
+  width: 50%;
+  max-height: 50vh;
+}
+
+body main section.start-building div h1 {
+  font-size: 3.5vw;
+  font-weight: 900;
+  line-height: 40px;
+  text-align: center;
+  color: #36506b;
+  margin: 1em auto;
+  width: 75%;
+  max-height: -webkit-min-content;
+  max-height: -moz-min-content;
+  max-height: min-content;
+}
+
+body main section.start-building div form {
+  margin: 0 1em;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+body main section.start-building div form input {
+  width: 25vw;
+  height: 50px;
+  border-radius: 36px 0 0 36px;
+  padding-left: 20px;
+}
+
+body main section.start-building div form input::-webkit-input-placeholder {
+  text-align: left;
+}
+
+body main section.start-building div form input:-ms-input-placeholder {
+  text-align: left;
+}
+
+body main section.start-building div form input::-ms-input-placeholder {
+  text-align: left;
+}
+
+body main section.start-building div form input::placeholder {
+  text-align: left;
+}
+
+body main section.start-building div form button {
+  width: 10vw;
+  height: 50px;
+  font-size: 1.2vw;
+  border-radius: 0 36px 36px 0;
+  background: #ba4270;
+  color: #efdbe5;
+  cursor: pointer;
+}
+
+body main section.start-building div p {
+  text-align: center;
+  margin: 1em auto;
+}
+
+body main section.partners {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background: #1c262f;
+  position: relative;
+  overflow: hidden;
+}
+
+body main section.partners div#partnersImg {
+  display: block;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-top: 0;
+  width: 40vw;
+}
+
+body main section.partners div#partnersImg img {
+  width: 130px;
+  height: 25px;
+  margin: 1em;
+  z-index: 2;
+}
+
+body main section.partners div#partnersImg .circle {
+  display: block;
+  background: rgba(46, 64, 78, 0.2);
+  height: 410px;
+  width: 40vw;
+  -webkit-transform: translate(-56.25rem, -11.25rem);
+          transform: translate(-56.25rem, -11.25rem);
+}
+
+body main section.partners div#partners {
+  overflow: hidden;
+  width: 40vw;
+}
+
+body main section.partners div#partners h2 {
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 44px;
+  text-align: center;
+  color: #fafcfd;
+  margin-bottom: 1em;
+  margin-top: 3em;
+}
+
+body main section.partners div#partners P {
+  text-align: justify;
+  color: #82888e;
+  line-height: 24px;
+}
+
+body main section.partners div#partners a {
+  border-radius: 29px;
+  border: 1px solid #bdc1c5;
+  background: #1c262f;
+  display: block;
+  margin: 3em 0;
+  padding-top: 10px;
+  font-size: 18px;
+  color: #bdc1c5;
+  width: 150px;
+  height: 44px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+body main section.partners div#partners a:hover {
+  border-color: #18a0fb;
+}
+
+body main .easy-to-implement {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .easy-to-implement div.DivImg {
+  width: 45vw;
+}
+
+body main .easy-to-implement div.DivImg img {
+  max-width: 40vw;
+  margin-top: 5em;
+}
+
+body main .easy-to-implement div {
+  width: 40vw;
+}
+
+body main .easy-to-implement div h4 {
+  text-align: justify;
+  font-size: 30px;
+  color: #36506b;
+  margin: 1em auto;
+}
+
+body main .easy-to-implement div p {
+  text-align: justify;
+  color: #7a8c9a;
+}
+
+body main .UIUX {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+body main .UIUX div {
+  width: 40vw;
+}
+
+body main .UIUX div h3 {
+  text-align: center;
+  font-size: 30px;
+  color: #36506b;
+  margin: 1em auto;
+}
+
+body main .UIUX div p {
+  text-align: center;
+  color: #7a8c9a;
+  margin-bottom: 4em;
+}
+
+body main .UIUX div img {
+  height: auto;
+  width: 55%;
+  margin: 0 auto;
+  display: block;
+  z-index: 1;
+}
+
+body main .UIUX .circle {
+  display: block;
+  background: rgba(46, 64, 78, 0.2);
+  height: 510px;
+  width: 40vw;
+  -webkit-transform: translate(45rem, 1rem);
+          transform: translate(45rem, 1rem);
+}
+
+body main .personalFinance {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-top: 5em;
+}
+
+body main .personalFinance div {
+  width: 30vw;
+}
+
+body main .personalFinance div h5 {
+  text-align: center;
+  font-size: 30px;
+  color: #36506b;
+  margin: 1em auto;
+}
+
+body main .personalFinance div p {
+  text-align: center;
+  color: #7a8c9a;
+  margin-bottom: 4em;
+}
+
+body main .personalFinance div img {
+  display: block;
+  margin: 0 auto;
+  height: auto;
+}
+
+body footer {
+  margin-top: 3em;
+  background: #1c262f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 20vh;
+  position: relative;
+  overflow: hidden;
+}
+
+body footer .circle {
+  display: block;
+  background: rgba(46, 64, 78, 0.2);
+  height: 270px;
+  width: 100vw;
+  -webkit-transform: translate(1px, 150px);
+          transform: translate(1px, 150px);
+}
+
+body footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  margin-right: 32%;
+  z-index: 1;
+}
+
+body footer ul li {
+  padding: 1em;
+}
+
+body footer ul li a {
+  color: #aeb3b9;
+  text-decoration: none;
+  font-size: 18px;
+  text-transform: capitalize;
+}
+
+body footer .social_media {
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body footer .social_media img {
+  width: 24px;
+  height: 24px;
+  margin-right: 1em;
+}
+
+body header nav .side-cicle {
+  -webkit-transform: translate(170%, -55%);
+          transform: translate(170%, -55%);
+}
+
+body main > h2 {
+  text-align: center;
+  font-size: 40px;
+  line-height: 44px;
+  height: 176px;
+  width: 40vw;
+  color: #36506b;
+  margin: 2em auto;
+}
+
+body main div.team-foto {
+  background: url(/Images/teamImage-desktop.png) no-repeat;
+  background-size: 100% 100%;
+  width: 100vw;
+  height: 500px;
+}
+
+body main .our_vision {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 15vh auto;
+}
+
+body main .our_vision div > h3,
+body main .our_vision div > h4,
+body main .our_vision div > p {
+  text-align: center;
+  line-height: 24px;
+  width: 90vw;
+}
+
+body main .our_vision div > h3 {
+  font-size: 20px;
+  margin: 2rem auto;
+  color: #36506b;
+  width: 30vw;
+}
+
+body main .our_vision div > p {
+  color: #7a8c9a;
+  width: 40vw;
+}
+
+body main .our_vision div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+body main .team div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body main .team h6 {
+  color: #7a8c9a;
+  text-transform: capitalize;
+}
+
+body main .team span {
+  font-size: 40px;
+  color: #ba4270;
+  font-weight: 900;
+  text-align: right;
+  display: block;
+  margin: 1.5rem auto;
+}
+
+body main .team .special-article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+}
+
+header nav .side-cicle {
+  -webkit-transform: translate(70%, -65%);
+          transform: translate(70%, -65%);
+}
+
+main .pricing-plannes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main .pricing-plannes div {
+  width: 25vw;
+}
+
+main .pricing-plannes div > h4 {
+  color: #ba4270;
+  margin: 2rem auto;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+main .pricing-plannes div span {
+  font-size: 30px;
+  text-align: inherit;
+  display: block;
+  color: #36506b;
+  font-weight: 900;
+  margin-bottom: 1em;
+}
+
+main .pricing-plannes ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  max-width: 50vw;
+  margin-left: 0;
+}
+
+main .pricing-plannes ul li .fas {
+  color: #ba4270;
+  margin-right: 1em;
+}
+
+main .pricing-plannes ul li span {
+  margin-left: 1em;
+  display: inline-block;
+}
+
+main section.contact-us {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 0.5fr 0.5fr;
+      grid-template-columns: 0.5fr 0.5fr;
+  -ms-grid-rows: 0.5fr 0.5fr;
+      grid-template-rows: 0.5fr 0.5fr;
+  gap: 10%;
+      grid-template-areas: "form partners" "paragraph paragraph";
+  margin: 9% 15%;
+}
+
+main section.contact-us .button-shadow:focus {
+  -webkit-box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+main section.contact-us button.btn {
+  margin: 0;
+}
+
+main section.contact-us div.our-partners {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: partners;
+}
+
+main section.contact-us div.our-partners p {
+  font-size: 20px;
+  text-align: center;
+}
+
+main section.contact-us div.our-partners img {
+  width: 80%;
+  height: 200px;
+}
+
+main section.contact-us form.wrapper {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: form;
+  margin-bottom: 2em;
+  margin-top: 4em;
+  position: relative;
+}
+
+main section.contact-us form.wrapper .input-data {
+  height: 40px;
+  width: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main section.contact-us form.wrapper .input-data input {
+  width: 100%;
+  background: #eef3f9;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid black;
+}
+
+main section.contact-us form.wrapper .input-data input:focus ~ label,
+main section.contact-us form.wrapper .input-data input:valid ~ label {
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+  color: green;
+  font-weight: 900;
+  font-size: 12px;
+}
+
+main section.contact-us form.wrapper .input-data input:focus ~ .underline::before,
+main section.contact-us form.wrapper .input-data input:valid ~ .underline::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+main section.contact-us form.wrapper .input-data .underline {
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+}
+
+main section.contact-us form.wrapper .input-data .underline::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #4158d0;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+main section.contact-us form.wrapper .input-data label {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  text-transform: capitalize;
+}
+
+main section.contact-us div {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: paragraph;
+}
+
+main section.contact-us div input.rectangle {
+  display: inline-block;
+  width: 26px;
+  height: 20px;
+  background: #cfd8e1;
+  margin: 1.5em;
+}
+
+main section.contact-us div p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #7a8c9a;
+}
+
 @media (max-width: 400px) {
+  body header nav {
+    margin: 0;
+  }
   body header nav label.hamburguer-menu {
     display: block;
-    border: green solid 2px;
     padding: 10px;
     position: relative;
     float: right;
     cursor: pointer;
+    margin-right: 30px;
+    margin-top: 14px;
   }
   body header nav label.hamburguer-menu span {
     background: #333;
@@ -75,6 +891,9 @@ img {
             transform: rotate(45deg);
     top: 0;
   }
+  body header nav .logo img {
+    width: 100%;
+  }
   body header nav ul.Menu {
     display: none;
     width: 99vw;
@@ -82,6 +901,9 @@ img {
     -webkit-transition: all 2s ease-in-out;
     transition: all 2s ease-in-out;
     position: absolute;
+    left: 0;
+    margin-top: 35px;
+    z-index: 4;
   }
   body header nav ul.Menu li {
     width: 100vw;
@@ -94,8 +916,6 @@ img {
     display: block;
     padding: 20px 10px;
     color: #ddd;
-    text-transform: capitalize;
-    text-decoration: none;
     font-size: 5.5vw;
   }
   body header nav .demo {
@@ -106,11 +926,8 @@ img {
     background: rgba(46, 64, 78, 0.3);
     height: 270px;
     width: 100vw;
-    border-radius: 50%;
-    position: absolute;
     -webkit-transform: translate(1px, -150px);
             transform: translate(1px, -150px);
-    z-index: -1;
     overflow: hidden;
   }
   body main section.start-building {
@@ -123,10 +940,7 @@ img {
             flex-direction: column-reverse;
   }
   body main section.start-building div {
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    padding-top: 2rem;
+    width: 100vw;
   }
   body main section.start-building div h1 {
     font-size: 30px;
@@ -135,13 +949,11 @@ img {
     text-align: center;
     color: #36506b;
     margin-bottom: 1em;
-  }
-  body main section.start-building div img {
-    width: 100px;
-    height: 150px;
+    width: 100%;
   }
   body main section.start-building div form {
     margin: 0 1em;
+    display: block;
   }
   body main section.start-building div form input {
     width: 90vw;
@@ -165,13 +977,31 @@ img {
     width: 90vw;
     height: 50px;
     border-radius: 36px;
+    font-size: inherit;
     margin-top: 15px;
     background: #ba4270;
     color: #efdbe5;
+    position: relative;
+    left: 0;
   }
   body main section.start-building div p {
     text-align: center;
     margin: 1.2em auto;
+  }
+  body main section.start-building div.phone-1 {
+    width: auto;
+    max-width: auto;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    padding-top: 2rem;
+  }
+  body main section.start-building div.phone-1 img {
+    width: 100px;
+    max-width: 100%;
+    height: 150px;
+    position: relative;
+    left: 1px;
   }
   body main section.partners {
     display: -webkit-box;
@@ -181,6 +1011,9 @@ img {
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
+    -webkit-box-pack: inherit;
+        -ms-flex-pack: inherit;
+            justify-content: inherit;
     background: #1c262f;
     position: relative;
     overflow: hidden;
@@ -195,6 +1028,7 @@ img {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     margin-top: 40px;
+    width: 100vw;
   }
   body main section.partners div#partnersImg img {
     width: 130px;
@@ -204,16 +1038,14 @@ img {
   }
   body main section.partners div#partnersImg .circle {
     display: block;
-    background: rgba(46, 64, 78, 0.2);
     height: 270px;
     width: 100vw;
-    border-radius: 50%;
-    position: absolute;
     -webkit-transform: translate(1px, -150px);
             transform: translate(1px, -150px);
   }
   body main section.partners div#partners {
     overflow: hidden;
+    width: 100vw;
   }
   body main section.partners div#partners h2 {
     font-size: 30px;
@@ -263,9 +1095,16 @@ img {
         -ms-flex-align: center;
             align-items: center;
   }
-  body main .easy-to-implement div img {
-    max-width: 70vw;
+  body main .easy-to-implement div.DivImg {
+    width: 70vw;
+  }
+  body main .easy-to-implement div.DivImg img {
+    max-width: 65vw;
     margin-top: 5em;
+    margin-left: 0;
+  }
+  body main .easy-to-implement div {
+    width: 100vw;
   }
   body main .easy-to-implement div h4 {
     text-align: center;
@@ -293,6 +1132,9 @@ img {
         -ms-flex-align: center;
             align-items: center;
   }
+  body main .UIUX div {
+    width: 100vw;
+  }
   body main .UIUX div h3 {
     text-align: center;
     font-size: 30px;
@@ -304,6 +1146,9 @@ img {
     width: 95vw;
     color: #7a8c9a;
     margin-bottom: 4em;
+  }
+  body main .UIUX div {
+    width: 100vw;
   }
   body main .UIUX div img {
     height: auto;
@@ -322,6 +1167,10 @@ img {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
+    margin-top: 2em;
+  }
+  body main .personalFinance div {
+    width: 100vw;
   }
   body main .personalFinance div h5 {
     text-align: center;
@@ -340,21 +1189,16 @@ img {
     margin: 0 auto;
     height: auto;
   }
-  body main .ready_to_start > p {
-    font-size: 25px;
-    font-weight: 900;
-    text-align: center;
-    color: #36506b;
-    margin-bottom: 1.2em;
+  body main .ready_to_start {
+    display: block;
+    margin-top: 0;
   }
   body main .ready_to_start form {
-    margin: 0 1em;
+    display: block;
   }
   body main .ready_to_start form input {
     width: 90vw;
-    height: 50px;
     border-radius: 36px;
-    padding-left: 20px;
   }
   body main .ready_to_start form input::-webkit-input-placeholder {
     text-align: center;
@@ -370,11 +1214,9 @@ img {
   }
   body main .ready_to_start form button {
     width: 90vw;
-    height: 50px;
     border-radius: 36px;
     margin-top: 15px;
-    background: #ba4270;
-    color: #efdbe5;
+    font-size: inherit;
   }
   body footer {
     margin-top: 3em;
@@ -398,15 +1240,15 @@ img {
   }
   body footer .circle {
     display: block;
-    background: rgba(46, 64, 78, 0.2);
     height: 270px;
     width: 100vw;
-    border-radius: 50%;
-    position: absolute;
     -webkit-transform: translate(1px, 150px);
             transform: translate(1px, 150px);
   }
   body footer ul {
+    display: block;
+    position: relative;
+    margin: 0 auto;
     z-index: 1;
   }
   body footer ul li {
@@ -436,6 +1278,14 @@ img {
     height: auto;
     width: 90vw;
     color: #36506b;
+  }
+  body main div.team-foto {
+    background: url(/Images/group-of-friends-hanging-out-933964.jpg) no-repeat;
+    background-size: 100vw;
+    height: 195px;
+    max-height: -webkit-max-content;
+    max-height: -moz-max-content;
+    max-height: max-content;
   }
   body main .our_vision {
     display: -webkit-box;
@@ -467,6 +1317,9 @@ img {
   body main .our_vision div > p {
     color: #7a8c9a;
   }
+  body main .our_vision div {
+    display: block;
+  }
   body main .team h6 {
     color: #7a8c9a;
     text-transform: capitalize;
@@ -479,9 +1332,24 @@ img {
     display: block;
     margin: 1.5rem auto;
   }
+  body main .team .special-article {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 45vw;
+  }
   body header nav .side-cicle {
     -webkit-transform: translate(70%, -65%);
             transform: translate(70%, -65%);
+  }
+  body main .pricing-plannes div {
+    width: 100vw;
   }
   body main .pricing-plannes div > h4 {
     color: #ba4270;
@@ -519,36 +1387,120 @@ img {
     margin-left: 1.5em;
     display: inline-block;
   }
-  body main .pricing-plannes button {
-    border-radius: 29px;
-    border: 3px solid #bdc1c5;
-    background: inherit;
-    display: block;
+  body main section.contact-us {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  body main section.contact-us .button-shadow:focus {
+    -webkit-box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  }
+  body main section.contact-us button.btn {
     margin: 3em auto;
-    color: #36506b;
-    width: 150px;
-    height: 44px;
+  }
+  body main section.contact-us div.our-partners {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+  body main section.contact-us div.our-partners p {
+    font-size: 22px;
+    text-align: center;
+  }
+  body main section.contact-us div.our-partners img {
+    width: 100%;
+    height: auto;
+  }
+  body main section.contact-us form.wrapper {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    margin-bottom: 2em;
+    margin-top: 4em;
+    position: relative;
+  }
+  body main section.contact-us form.wrapper .input-data {
+    height: 40px;
+    width: 100%;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  body main section.contact-us form.wrapper .input-data input {
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid black;
+  }
+  body main section.contact-us form.wrapper .input-data input:focus ~ label,
+  body main section.contact-us form.wrapper .input-data input:valid ~ label {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+    color: green;
+    font-weight: 900;
+    font-size: 12px;
+  }
+  body main section.contact-us form.wrapper .input-data input:focus ~ .underline::before,
+  body main section.contact-us form.wrapper .input-data input:valid ~ .underline::before {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  body main section.contact-us form.wrapper .input-data .underline {
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+  }
+  body main section.contact-us form.wrapper .input-data .underline::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #4158d0;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transition: -webkit-transform 0.3s ease;
+    transition: -webkit-transform 0.3s ease;
+    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  }
+  body main section.contact-us form.wrapper .input-data label {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    pointer-events: none;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
     text-transform: capitalize;
   }
-  body main .pricing-plannes button:hover {
-    border-color: #18a0fb;
+  body main section.contact-us div {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
   }
-}
-
-body {
-  width: 100vw;
-  height: auto;
-  font-family: "Playfair Display", serif;
-  background: #eef3f9;
-  border: red solid 5px;
-}
-
-body header,
-body main {
-  margin: 0;
-}
-
-body header nav #toggle {
-  display: none;
+  body main section.contact-us div input.rectangle {
+    display: inline-block;
+    width: 26px;
+    height: 20px;
+    background: #cfd8e1;
+    margin: 1.5em;
+  }
+  body main section.contact-us div p {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: #7a8c9a;
+  }
 }
 /*# sourceMappingURL=main.css.map */

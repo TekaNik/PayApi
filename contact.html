@@ -18,7 +18,7 @@
         <ul class="Menu">
           <li><a href="pricing.html">pricing</a></li>
           <li><a href="about.html">about</a></li>
-          <li><a href="contact.html">contact</a></li>
+          <!-- <li><a href="contact.html">contact</a></li> -->
         </ul>
         <span class="circle side-cicle"></span>
         <a href="#" class="demo">schedule a demo</a>
@@ -27,31 +27,60 @@
 
     <main>
       <h2>submit a help request and we´ll get in touch shortly.</h2>
-      <section>
-        <form action="">
-          <label for="">name</label>
-          <input type="text" />
-          <label for="">Email address</label>
-          <input type="text" />
-          <label for="">company name</label>
-          <input type="text" />
-          <label for="">title</label>
-          <input type="text" />
-          <label for="">message</label>
-          <textarea name="message" id="" cols="30" rows="10"></textarea>
+      <section class="contact-us">
+        <form class="wrapper">
+          <div class="input-data">
+            <input type="text" required />
+            <span class="underline"></span>
+            <label
+              >name
+              <!-- <span class="thelabel">name</span> -->
+            </label>
+          </div>
+          <div class="input-data">
+            <input type="email" required />
+            <span class="underline"></span>
+            <label
+              >email
+              <!-- <span class="thelabel">email</span> -->
+            </label>
+          </div>
+          <div class="input-data">
+            <input type="text" required />
+            <span class="underline"></span>
+            <label
+              >company name
+              <!-- <span class="thelabel">company name</span> -->
+            </label>
+          </div>
+          <div class="input-data">
+            <input type="text" required />
+            <span class="underline"></span>
+            <label
+              >title
+              <!-- <span class="thelabel">title</span> -->
+            </label>
+          </div>
+
+          <textarea
+            name="message"
+            class="input-data"
+            placeholder="Message"
+          ></textarea>
         </form>
-        <div>
+        <div class="our-partners">
           <p>Join the thousands of innovators already building with us</p>
           <img src="./Images/partners.png" alt="our partners" />
         </div>
+        <div>
+          <p>
+            <input class="rectangle" type="checkbox" />Stay up-to-date with
+            company announcements and updates to our API
+          </p>
+          <button type="submit" class="btn button-shadow">submit</button>
+        </div>
       </section>
-      <div>
-        <p>
-          <span></span> Stay up-to-date with company announcements and updates
-          to our API
-        </p>
-        <button type="submit">submit</button>
-      </div>
+
       <section class="ready_to_start">
         <p>Ready to Start?</p>
         <form>
