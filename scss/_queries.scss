@@ -1,24 +1,30 @@
+@import "./resets";
 @import "./variables";
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;900&display=swap");
 
+// MediaQueries
 @media (max-width: 400px) {
-  // For The HomePage
-
   body {
     header nav {
-      // all this for Hamburguer Menu
+      // display: flex;
+      // justify-content: space-between;
+      margin: 0;
+      // Hamburguer Menu settings
       label.hamburguer-menu {
         display: block;
-        border: green solid 2px;
         padding: 10px;
         position: relative;
         float: right;
         cursor: pointer;
+        margin-right: 30px;
+        margin-top: 14px;
         span {
           background: #333;
           display: block;
           position: relative;
           height: 3px;
           width: 20px;
+
           transition: background 0.2s ease-out;
           &::before {
             content: "";
@@ -62,6 +68,12 @@
           }
         }
       }
+      .logo img {
+        width: 100%;
+      }
+
+      // The navigation Links
+
       ul.Menu {
         // max-height: 0;
         display: none;
@@ -69,6 +81,9 @@
         background: #333;
         transition: all 2s ease-in-out;
         position: absolute;
+        left: 0;
+        margin-top: 35px;
+        z-index: 4;
 
         li {
           width: 100vw;
@@ -82,8 +97,6 @@
           display: block;
           padding: 20px 10px;
           color: #ddd;
-          text-transform: capitalize;
-          text-decoration: none;
           font-size: 5.5vw;
         }
       }
@@ -95,15 +108,12 @@
         background: rgba(46, 64, 78, 0.3);
         height: 270px;
         width: 100vw;
-        // width: 400px;
-        border-radius: 50%;
-        position: absolute;
-
         transform: translate(1px, -150px);
-        z-index: -1;
         overflow: hidden;
       }
     }
+
+    // The main sections and its sections
 
     main {
       section.start-building {
@@ -111,8 +121,8 @@
         flex-direction: column-reverse;
 
         div {
-          align-self: center;
-          padding-top: 2rem;
+          width: 100vw;
+
           h1 {
             font-size: 30px;
             font-weight: 900;
@@ -120,16 +130,12 @@
             text-align: center;
             color: $primary-color;
             margin-bottom: 1em;
+            width: 100%;
           }
 
-          img {
-            width: 100px;
-            height: 150px;
-          }
-        }
-        div {
           form {
             margin: 0 1em;
+            display: block;
             input {
               width: 90vw;
               height: 50px;
@@ -143,9 +149,12 @@
               width: 90vw;
               height: 50px;
               border-radius: 36px;
+              font-size: inherit;
               margin-top: 15px;
               background: $secondary-color;
               color: #efdbe5;
+              position: relative;
+              left: 0;
             }
           }
           p {
@@ -153,10 +162,25 @@
             margin: 1.2em auto;
           }
         }
+        div.phone-1 {
+          width: auto;
+          max-width: auto;
+
+          align-self: center;
+          padding-top: 2rem;
+          img {
+            width: 100px;
+            max-width: 100%;
+            height: 150px;
+            position: relative;
+            left: 1px;
+          }
+        }
       }
       section.partners {
         display: flex;
         flex-direction: column-reverse;
+        justify-content: inherit;
         background: #1c262f;
         position: relative;
         overflow: hidden;
@@ -166,6 +190,7 @@
           justify-content: space-evenly;
           flex-wrap: wrap;
           margin-top: 40px;
+          width: 100vw;
 
           img {
             width: 130px;
@@ -175,17 +200,15 @@
           }
           .circle {
             display: block;
-            background: rgba(46, 64, 78, 0.2);
+            // background: rgba(46, 64, 78, 0.2);
             height: 270px;
             width: 100vw;
-            // width: 400px;
-            border-radius: 50%;
-            position: absolute;
             transform: translate(1px, -150px);
           }
         }
         div#partners {
           overflow: hidden;
+          width: 100vw;
           h2 {
             font-size: 30px;
             font-weight: 900;
@@ -228,11 +251,16 @@
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
-        div img {
-          max-width: 70vw;
-          margin-top: 5em;
+        div.DivImg {
+          width: 70vw;
+          img {
+            max-width: 65vw;
+            margin-top: 5em;
+            margin-left: 0;
+          }
         }
         div {
+          width: 100vw;
           h4 {
             text-align: center;
             font-size: 30px;
@@ -252,6 +280,7 @@
         justify-content: space-evenly;
         align-items: center;
         div {
+          width: 100vw;
           h3 {
             text-align: center;
             font-size: 30px;
@@ -265,25 +294,24 @@
             margin-bottom: 4em;
           }
         }
-        div img {
-          height: auto;
-          width: 85%;
-          margin: 0 auto;
-          display: block;
+        div {
+          width: 100vw;
+          img {
+            height: auto;
+            width: 85%;
+            margin: 0 auto;
+            display: block;
+          }
         }
-        // span.circle {
-        //     border: 2px solid red;
-        //     width: 20px;
-        //     height: 21px;
-        //     margin: 0 auto;
-        //     display: block;
-        // }
       }
       .personalFinance {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
+        margin-top: 2em;
         div {
+          width: 100vw;
+
           h5 {
             text-align: center;
             font-size: 30px;
@@ -304,32 +332,24 @@
         }
       }
       .ready_to_start {
-        > p {
-          font-size: 25px;
-          font-weight: 900;
-          text-align: center;
-          color: $primary-color;
-          margin-bottom: 1.2em;
-        }
+        display: block;
+        margin-top: 0;
 
         form {
-          margin: 0 1em;
+          display: block;
+          // margin: 0 1em;
           input {
             width: 90vw;
-            height: 50px;
             border-radius: 36px;
-            padding-left: 20px;
             &::placeholder {
               text-align: center;
             }
           }
           button {
             width: 90vw;
-            height: 50px;
             border-radius: 36px;
             margin-top: 15px;
-            background: $secondary-color;
-            color: #efdbe5;
+            font-size: inherit;
           }
         }
       }
@@ -346,17 +366,16 @@
       overflow: hidden;
       .circle {
         display: block;
-
-        background: rgba(46, 64, 78, 0.2);
+        // background: rgba(46, 64, 78, 0.2);
         height: 270px;
         width: 100vw;
-        // width: 400px;
-        border-radius: 50%;
-        position: absolute;
         transform: translate(1px, 150px);
       }
 
       ul {
+        display: block;
+        position: relative;
+        margin: 0 auto;
         z-index: 1;
         li {
           padding: 1em;
@@ -391,6 +410,13 @@
         width: 90vw;
         color: $primary-color;
       }
+      div.team-foto {
+        background: url(/Images/group-of-friends-hanging-out-933964.jpg)
+          no-repeat;
+        background-size: 100vw;
+        height: 195px;
+        max-height: max-content;
+      }
       .our_vision {
         display: flex;
         flex-direction: column;
@@ -412,6 +438,9 @@
         div > p {
           color: $for-text;
         }
+        div {
+          display: block;
+        }
       }
       .team {
         h6 {
@@ -426,6 +455,12 @@
           display: block;
           margin: 1.5rem auto;
         }
+        .special-article {
+          display: flex;
+          justify-content: space-around;
+          flex-direction: column;
+          width: 45vw;
+        }
       }
     }
     // for The pricing page
@@ -435,6 +470,7 @@
     main {
       .pricing-plannes {
         div {
+          width: 100vw;
           > h4 {
             color: $secondary-color;
             margin: 2rem auto;
@@ -491,6 +527,9 @@
       .button-shadow:focus {
         box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
           0 17px 50px 0 rgba(0, 0, 0, 0.19);
+      }
+      button.btn {
+        margin: 3em auto;
       }
 
       div.our-partners {

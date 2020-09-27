@@ -161,7 +161,7 @@ body main button.btn {
   border-radius: 29px;
   background: inherit;
   display: block;
-  margin: 3em auto;
+  margin: 2em auto;
   color: #36506b;
   width: 150px;
   height: 44px;
@@ -652,6 +652,7 @@ main .pricing-plannes {
 
 main .pricing-plannes div {
   width: 25vw;
+  border: solid 1px;
 }
 
 main .pricing-plannes div > h4 {
@@ -684,14 +685,13 @@ main .pricing-plannes ul {
   margin-left: 0;
 }
 
+main .pricing-plannes ul .empty {
+  margin-left: 1.5em;
+}
+
 main .pricing-plannes ul li .fas {
   color: #ba4270;
   margin-right: 1em;
-}
-
-main .pricing-plannes ul li span {
-  margin-left: 1em;
-  display: inline-block;
 }
 
 main section.contact-us {
